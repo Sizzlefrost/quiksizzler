@@ -3,6 +3,7 @@ A tool for Invisible, Inc. modding that automatically assembles the mod files to
 
 Place this in the main mod directory (where you hold modinfo and scripts.zip)
 This file builds a new version of your mod. It takes files from <mod folder>\scripts and puts them into scripts.zip; also updates modinfo.txt with a new version number. On top of that, prompts user to launch the KWAD builder, and if it does, automatically puts the resulting .kwads into the mod folder.
+  
 List of things the Quiksizzler cares about:
 <0> Must be in the main mod directory
 REFERENCE: mod directory path looks like "...InvisibleInc\mods\<yourmod>\"
