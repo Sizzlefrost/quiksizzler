@@ -101,7 +101,7 @@ goto:scripts
 ::can you guess what's happening here?
 for /f "usebackq tokens=3 delims=. " %%a in (`findstr /b version "modinfo.txt"`) do set /a Bd =%%a+1
 ::still required; version not only stores the number, but also the string "version = ". Somewhat redundant, though - it could be hardcoded.
-for /f "usebackq tokens=1 delims=. " %%a i (`findstr /b version "modinfo.txt"`) do echo %%a = >version.tmp
+for /f "usebackq tokens=1 delims=. " %%a in (`findstr /b version "modinfo.txt"`) do echo %%a = >version.tmp
 findstr /v version modinfo.txt>modinfo.tmp
 move /y modinfo.tmp modinfo.txt
 for /f "delims=" %%l in (version.tmp) do echo %%l!Bd!.0.0.1>>modinfo.txt
