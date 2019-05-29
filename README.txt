@@ -7,13 +7,13 @@ This file builds a new version of your mod. It takes files from <mod folder>\scr
 List of things the Quiksizzler cares about:
 <0> Must be in the main mod directory
 REFERENCE: mod directory path looks like "...InvisibleInc\mods\<yourmod>\"
-...this does not have an "if not" clause, just DO IT.
-<1> Must have modinfo.txt with readable version (default will do)
+<1> Must have modinfo.txt with a version line (like the default)
 ...if not, QS will make a placeholder file for it
 <2> Must have a \scripts subfolder within the directory, to be zipped
-...if not, QS won't zip your files
+...if not, QS won't be able to zip mod files
 <3> Must have KWAD builder as a build.bat file in a folder named "KWAD builder" somewhere in either
 1)InvisibleInc folder;
-2)InvisibleIncModUploader folder;
-3)desktop (any subfolders within those folders are fine too)
-...if not, QS will skip building KWADs
+2)Desktop;
+3)InvisibleIncModUploader folder (any subfolders within those folders are fine too)
+...if not, QS will skip building KWADs.
+...and if there are multiple KWAD builders found, the directories listed here are the priority order.
